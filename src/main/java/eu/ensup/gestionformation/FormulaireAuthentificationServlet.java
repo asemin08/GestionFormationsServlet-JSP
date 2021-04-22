@@ -1,5 +1,6 @@
 package eu.ensup.gestionformation;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,16 +30,15 @@ public class FormulaireAuthentificationServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
+        //Etape service
 
-        resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
-        out.println("<html>");
-        out.println("<body>");
-        out.println("<ul>");
-        out.println("<li> login : "+ login + "</li>");
-        out.println("<li> password : "+ password + "</li>");
-        out.println("</ul>");
-        out.println("</body>");
-        out.println("</html>");
+        //Reponse à l'utilisateur
+        RequestDispatcher dispatcher;
+        if(("test".equalsIgnoreCase(login))&&("test".equalsIgnoreCase(password))){
+            dispatcher = req.getRequestDispatcher("/Accueil.jsp");
+        }else{
+            dispatcher = req.getRequestDispatcher("/formulaire_authentification.jsp");
+        }
+        dispatcher.forward(req, resp);
     }
 }
