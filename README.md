@@ -9,6 +9,7 @@ Chaque tp correspond a une branche différente :
 * Voici la branche vers le tp6 création de ça première jsp [TP6](https://github.com/asemin08/GestionFormationsServlet-JSP/tree/tp6-JSP)
 * Voici la branche vers le tp7 utilisation RequestDispatcher [TP7](https://github.com/asemin08/GestionFormationsServlet-JSP/tree/tp7-RequestDispatcher)
 * Voici la branche vers le tp8 utilisation Session [TP8](https://github.com/asemin08/GestionFormationsServlet-JSP/tree/tp8-Session)
+*  Voici la branche vers le tp10 utilisation du langage JSTL/EL [TP10](https://github.com/asemin08/GestionFormationsServlet-JSP/tree/tp-10-MiseEnPlaceEL)
 
 
 --- 
