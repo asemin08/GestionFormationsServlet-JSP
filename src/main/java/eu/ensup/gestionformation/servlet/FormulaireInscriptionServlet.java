@@ -1,10 +1,14 @@
 package eu.ensup.gestionformation.servlet;
 
+import eu.ensup.gestionformation.metier.User;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -32,19 +36,20 @@ public class FormulaireInscriptionServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
+        //Etape service
+        User user = new User(login, password);
+        HttpSession maSession = req.getSession();
 
-        resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
-        out.println("<html>");
-        out.println("<body>");
-        out.println("<ul>");
-        out.println("<li> nom : "+ nom + "</li>");
-        out.println("<li> prenom : "+ prenom + "</li>");
-        out.println("<li> email : "+ email + "</li>");
-        out.println("<li> login : "+ login + "</li>");
-        out.println("<li> password : "+ password + "</li>");
-        out.println("</ul>");
-        out.println("</body>");
-        out.println("</html>");
+        maSession.setAttribute("nom",nom);
+        maSession.setAttribute("prenom", prenom);
+        maSession.setAttribute("email", email);
+        maSession.setAttribute("login", login);
+        maSession.setAttribute("password", password);
+
+        //redirection vers page jsp
+        RequestDispatcher dispatcher = null;
+        dispatcher = req.getRequestDispatcher("/demoEL.jsp");
+        dispatcher.forward(req,resp);
+
     }
 }
