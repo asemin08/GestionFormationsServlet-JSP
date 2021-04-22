@@ -27,4 +27,13 @@
     <url-pattern>/Inscription</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>FormulaireAuthentificationServlet</servlet-name>
+    <servlet-class>eu.ensup.gestionformation.FormulaireAuthentificationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FormulaireAuthentificationServlet</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+
 </web-app>
