@@ -6,7 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
   
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>formulaire_authentification.jsp</welcome-file>
   </welcome-file-list>
 
   <servlet>
@@ -34,6 +34,15 @@
   <servlet-mapping>
     <servlet-name>FormulaireAuthentificationServlet</servlet-name>
     <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AccueilServlet</servlet-name>
+    <servlet-class>eu.ensup.gestionformation.AccueilServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AccueilServlet</servlet-name>
+    <url-pattern>/accueil</url-pattern>
   </servlet-mapping>
 
 </web-app>

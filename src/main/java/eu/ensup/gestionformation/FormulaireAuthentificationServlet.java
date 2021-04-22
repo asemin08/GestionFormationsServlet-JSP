@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 /**
  * @author Allan
  */
-@WebServlet(urlPatterns = "/FormulaireAuthentificationServlet", name="formulaireAuthentification")
+@WebServlet(urlPatterns = "/", name="formulaireAuthentification")
 public class FormulaireAuthentificationServlet extends HttpServlet {
     private static final long serialVersionUID = 1;
 
@@ -22,11 +22,16 @@ public class FormulaireAuthentificationServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/formulaire_authentification.jsp").forward(req, resp);
+        traitement(req,resp);
+//        req.getRequestDispatcher("/formulaire_authentification.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        traitement(req, resp);
+    }
+
+    protected void traitement(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
