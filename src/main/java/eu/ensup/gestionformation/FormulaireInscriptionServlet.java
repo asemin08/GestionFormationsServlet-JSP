@@ -11,17 +11,17 @@ import java.io.PrintWriter;
 /**
  * @author Allan
  */
-@WebServlet(urlPatterns = "/FormulaireServlet", name="formulaire")
-public class FormulaireServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/FormulaireInscriptionServlet", name="formulaire")
+public class FormulaireInscriptionServlet extends HttpServlet {
     private static final long serialVersionUID = 1;
 
-    public FormulaireServlet() {
+    public FormulaireInscriptionServlet() {
         super();
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/formulaire.jsp").forward(req, resp);
+        req.getRequestDispatcher("/formulaire_inscription.jsp").forward(req, resp);
     }
 
     @Override

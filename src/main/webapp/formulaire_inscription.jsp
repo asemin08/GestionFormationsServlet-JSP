@@ -30,7 +30,7 @@
 
     <div id="form-content" class="row mt-5 justify-content-md-center">
         <div class="col-md-4  bg-info rounded">
-            <form id="form" name="form" method="post" action="FormulaireServlet">
+            <form id="form" name="form" method="post" action="FormulaireInscriptionServlet">
                 <div class="col-md-12 row text-center">
                 </div>
                 <div class="col-md-12 row  mt-2">

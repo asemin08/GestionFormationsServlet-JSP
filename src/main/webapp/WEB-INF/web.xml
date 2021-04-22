@@ -19,11 +19,11 @@
   </servlet-mapping>
 
   <servlet>
-    <servlet-name>FormulaireServlet</servlet-name>
-    <servlet-class>eu.ensup.gestionformation.FormulaireServlet</servlet-class>
+    <servlet-name>FormulaireInscriptionServlet</servlet-name>
+    <servlet-class>eu.ensup.gestionformation.FormulaireInscriptionServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>FormulaireServlet</servlet-name>
+    <servlet-name>FormulaireInscriptionServlet</servlet-name>
     <url-pattern>/Inscription</url-pattern>
   </servlet-mapping>
 
