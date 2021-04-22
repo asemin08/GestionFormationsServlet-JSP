@@ -11,7 +11,7 @@
 
   <servlet>
     <servlet-name>MaServlet</servlet-name>
-    <servlet-class>eu.ensup.gestionformation.MaServlet</servlet-class>
+    <servlet-class>eu.ensup.gestionformation.servlet.MaServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>MaServlet</servlet-name>
@@ -20,7 +20,7 @@
 
   <servlet>
     <servlet-name>FormulaireInscriptionServlet</servlet-name>
-    <servlet-class>eu.ensup.gestionformation.FormulaireInscriptionServlet</servlet-class>
+    <servlet-class>eu.ensup.gestionformation.servlet.FormulaireInscriptionServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>FormulaireInscriptionServlet</servlet-name>
@@ -29,7 +29,7 @@
 
   <servlet>
     <servlet-name>FormulaireAuthentificationServlet</servlet-name>
-    <servlet-class>eu.ensup.gestionformation.FormulaireAuthentificationServlet</servlet-class>
+    <servlet-class>eu.ensup.gestionformation.servlet.FormulaireAuthentificationServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>FormulaireAuthentificationServlet</servlet-name>
@@ -38,7 +38,7 @@
 
   <servlet>
     <servlet-name>AccueilServlet</servlet-name>
-    <servlet-class>eu.ensup.gestionformation.AccueilServlet</servlet-class>
+    <servlet-class>eu.ensup.gestionformation.servlet.AccueilServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AccueilServlet</servlet-name>

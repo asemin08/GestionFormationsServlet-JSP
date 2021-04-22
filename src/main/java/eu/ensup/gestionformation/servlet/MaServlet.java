@@ -1,4 +1,5 @@
-package eu.ensup.gestionformation;
+package eu.ensup.gestionformation.servlet;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,21 +12,27 @@ import java.io.PrintWriter;
 /**
  * @author Allan
  */
-@WebServlet(urlPatterns = "/AccueilServlet", name="Accueil")
-public class AccueilServlet extends HttpServlet {
+@WebServlet("/MaServlet")
+public class MaServlet extends HttpServlet {
     private static final long serialVersionUID = 1;
 
-    public AccueilServlet() {
+    public MaServlet() {
         super();
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/Accueil.jsp").forward(req, resp);
+        resp.setContentType("text/html");
+        PrintWriter out = resp.getWriter();
+        out.println("<html>");
+        out.println("<head><tilte>Liste de formations</title></head>");
+        out.println("<body>Liste des formation: java, WEBSERVice </body>");
+        out.println("<html>");
+        out.println("</html>");
+
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
     }
 }

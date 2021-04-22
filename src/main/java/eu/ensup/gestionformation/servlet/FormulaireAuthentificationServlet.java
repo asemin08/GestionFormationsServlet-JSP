@@ -1,4 +1,6 @@
-package eu.ensup.gestionformation;
+package eu.ensup.gestionformation.servlet;
+
+import eu.ensup.gestionformation.metier.User;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -6,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -36,14 +39,19 @@ public class FormulaireAuthentificationServlet extends HttpServlet {
         String password = req.getParameter("password");
 
         //Etape service
+        User user = new User(login, password);
+        HttpSession maSession = req.getSession();
+        maSession.setAttribute("utilisateur",user);
 
+        RequestDispatcher dispatcher  = req.getRequestDispatcher("resultatLogin.jsp");
+        dispatcher.forward(req,resp);
         //Reponse à l'utilisateur
-        RequestDispatcher dispatcher;
-        if(("test".equalsIgnoreCase(login))&&("test".equalsIgnoreCase(password))){
-            dispatcher = req.getRequestDispatcher("/Accueil.jsp");
-        }else{
-            dispatcher = req.getRequestDispatcher("/formulaire_authentification.jsp");
-        }
-        dispatcher.forward(req, resp);
+//        RequestDispatcher dispatcher;
+//        if(("test".equalsIgnoreCase(login))&&("test".equalsIgnoreCase(password))){
+//            dispatcher = req.getRequestDispatcher("/Accueil.jsp");
+//        }else{
+//            dispatcher = req.getRequestDispatcher("/formulaire_authentification.jsp");
+//        }
+//        dispatcher.forward(req, resp);
     }
 }

@@ -1,4 +1,4 @@
-package eu.ensup.gestionformation;
+package eu.ensup.gestionformation.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
