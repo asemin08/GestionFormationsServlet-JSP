@@ -18,4 +18,13 @@
     <url-pattern>/ListeFormation</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>FormulaireServlet</servlet-name>
+    <servlet-class>eu.ensup.gestionformation.FormulaireServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FormulaireServlet</servlet-name>
+    <url-pattern>/Inscription</url-pattern>
+  </servlet-mapping>
+
 </web-app>

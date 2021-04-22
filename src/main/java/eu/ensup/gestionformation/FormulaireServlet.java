@@ -11,11 +11,11 @@ import java.io.PrintWriter;
 /**
  * @author Allan
  */
-@WebServlet(urlPatterns = "/Formulaire", name="formulaire")
-public class Inscription extends HttpServlet {
+@WebServlet(urlPatterns = "/FormulaireServlet", name="formulaire")
+public class FormulaireServlet extends HttpServlet {
     private static final long serialVersionUID = 1;
 
-    public Inscription() {
+    public FormulaireServlet() {
         super();
     }
 
